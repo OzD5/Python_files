@@ -38,6 +38,7 @@ for epoch in range(epochs):
     if epoch % 10 == 0:
         print(f"Epoch {epoch+1}, loss = {loss.item():.4f}")
 predicted = model(X).detach().numpy()
+# Plotting using matplotlib
 plt.title('Linear Regression with Pytorch backpropagation')
 plt.plot(X_np, Y_np,'ro')
 plt.plot(X_np, predicted,'b')    
